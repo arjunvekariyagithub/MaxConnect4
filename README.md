@@ -1,2 +1,2 @@
 # MaxConnect4
-MaxConnect4 game in JAVA
+This is a Source code for MaxConnect4 game in JAVA implemented using Minimax AI algorithm.
