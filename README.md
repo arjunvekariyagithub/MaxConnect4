@@ -8,15 +8,16 @@
         APIS : main(), MakeHumanPlay(),  MakeComputerPlay4OneMove(outputFileName), printBoardAndScore(),        
                MakeComputerPlay4Interactive(), printResult().
 	
-        - MakeHumanPlay()                : this function takes input from user and makes the next move 
-                                           for human player.
-        - MakeComputerPlay4OneMove()     : this function is called when the computer have to make a move 
-                                           for a one-move mode game.
-        - printBoardAndScore()           : this function display the current score and the board's current 
-                                           state.
-        - MakeComputerPlay4Interactive() : this function is called when the computer have to make a move 
-                                           for an interactive mode game.
-        - printResult()                  : this function prints the final score and declares winner or tie.
+        - MakeHumanPlay()                : this function takes input from user and makes the next 
+                                           move for human player.
+        - MakeComputerPlay4OneMove()     : this function is called when the computer have to make 
+                                           a move for a one-move mode game.
+        - printBoardAndScore()           : this function display the current score and the board's 
+                                           current state.
+        - MakeComputerPlay4Interactive() : this function is called when the computer have to make a 
+                                           move for an interactive mode game.
+        - printResult()                  : this function prints the final score and declares winner 
+                                           or tie.
 
         
 ###GameBoard :
