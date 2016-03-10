@@ -8,40 +8,37 @@
         APIS : main(), MakeHumanPlay(),  MakeComputerPlay4OneMove(outputFileName), printBoardAndScore(),        
                MakeComputerPlay4Interactive(), printResult().
 	
-
-        MakeHumanPlay() -> this function takes input from user and makes the next move for human player.
-
-        MakeComputerPlay4OneMove() -> this function is called when the computer have to make a move for a one-move mode 
-        game.
-
-        printBoardAndScore() -> this function display the current score and the board's current state.
-
-        MakeComputerPlay4Interactive() -> this function is called when the computer have to make a move for an interactive  
-        mode game.
-
-        printResult() -> this function prints the final score and declares winner or tie.
+        - MakeHumanPlay()                : this function takes input from user and makes the next move 
+                                           for human player.
+        - MakeComputerPlay4OneMove()     : this function is called when the computer have to make a move 
+                                           for a one-move mode game.
+        - printBoardAndScore()           : this function display the current score and the board's current 
+                                           state.
+        - MakeComputerPlay4Interactive() : this function is called when the computer have to make a move 
+                                           for an interactive mode game.
+        - printResult()                  : this function prints the final score and declares winner or tie.
 
         
 ###GameBoard :
         APIS : getscore(), getCurrentTurn(), getGameBoard(), printGameBoard()
 
-        getscore() -> this function takes the current score and send it to printBoardAndScore() to print score.
-        
-        getCurrentTurn() -> this function traces the current turn.
-        
-        getGameBoard() -> this function takes the current gameboard state and pass it to printGameBoard() function.
-        
-        printGameBoard() -> this function prints the current board state.
+        - getscore()       : this function takes the current score and send it to printBoardAndScore() 
+                             to print score.
+        - getCurrentTurn() : this function traces the current turn.
+        - getGameBoard()   : this function takes the current gameboard state and pass it to 
+                             printGameBoard() function.
+        - printGameBoard() : this function prints the current board state.
         
 
 ###AiPlayer :
         APIS : findBestPlay(), Calculate_Min_Utility(), Calculate_Max_Utility()
 
-        findBestPlay() -> this function makes the decision to make a move for the computer using the min and max value from                           the below given two functions
+        - findBestPlay()          : this function makes the decision to make a move for the computer using 
+                                    the min and max value from the below given two functions
 
-        Calculate_Min_Utility() -> this function calculates the min value.
+        - Calculate_Min_Utility() : this function calculates the min value.
         
-        Calculate_Min_Utility() -> this function calculates the max value.
+        - Calculate_Min_Utility() : this function calculates the max value.
 
 
 ###How to run the Code :
