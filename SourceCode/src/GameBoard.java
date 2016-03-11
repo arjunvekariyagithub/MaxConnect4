@@ -49,18 +49,8 @@ public class GameBoard implements Cloneable {
             try {
                 gameData = input.readLine();
 
-                // testing
-                // uncomment the next 2 lines to see the whole line read in
-                // System.out.println("I just read ->" + gameData + "<- " +
-                // "outer for loop");
-
                 // read each piece from the input file
                 for (int j = 0; j < NOF_COLS; j++) {
-                    // testing- uncomment the next 3 lines to see each piece
-                    // that was read in
-                    // System.out.println("I just read ->" +
-                    // ( gameData.charAt( counter ) - 48 ) +
-                    // "<- inner for loop");
 
                     this.playBoard[i][j] = gameData.charAt(counter++) - 48;
 
@@ -94,10 +84,6 @@ public class GameBoard implements Cloneable {
         }
 
         this.currentTurn = gameData.charAt(0) - 48;
-
-        // testing-uncomment the next 2 lines to see which current turn was read
-        // System.out.println("the current turn i read was->" +
-        // this.currentTurn );
 
         // make sure the turn corresponds to the number of pcs played already
         if (!((this.currentTurn == Maxconnect4.ONE) || (this.currentTurn == Maxconnect4.TWO))) {
@@ -342,25 +328,8 @@ public class GameBoard implements Cloneable {
             // place the piece into the first empty spot
             for (int i = 5; i >= 0; i--) {
                 if (this.playBoard[i][column] == 0) {
-                    // if (this.pieceCount % 2 == 0) {
-
-                    // Simplified to improve time complexity
                     this.playBoard[i][column] = getCurrentTurn();
                     this.pieceCount++;
-
-                    // } else {
-                    // this.playBoard[i][column] = 2;
-                    // this.pieceCount++;
-                    // }
-
-                    // testing
-                    // warning: uncommenting the next 3 lines will
-                    // potentially produce LOTS of output
-                    // System.out.println("i just played piece in column ->" +
-                    // column + "<-");
-                    // this.printGameBoard();
-                    // end testing
-
                     return true;
                 }
             }
@@ -390,15 +359,6 @@ public class GameBoard implements Cloneable {
                 break;
             }
         }
-
-        // testing
-        // WARNING: uncommenting the next 3 lines will potentially
-        // produce LOTS of output
-        // System.out.println("gameBoard.removePiece(). I am removing the " +
-        // "piece in column ->" + column + "<-");
-        // this.printGameBoard();
-        // end testing
-
     } // end remove piece
 
     /************************ end solution methods **************************/
