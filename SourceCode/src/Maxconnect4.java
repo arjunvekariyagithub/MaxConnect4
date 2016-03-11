@@ -65,16 +65,6 @@ public class Maxconnect4 {
                 System.out.println("\n" + "value for 'next turn' doesn't recognized.  \n try again. \n");
                 exit_function(0);
             }
-//
-//            System.out.print("\nMaxConnect-4 game:\n");
-//            System.out.print("Game state before move:\n");
-//
-//            // print the current game board
-//            currentGame.printGameBoard();
-//
-//            // print the current scores
-//            System.out.println("Score: Player-1 = " + currentGame.getScore(ONE) + ", Player-2 = " + currentGame.getScore(TWO)
-//                + "\n ");
 
             if (currentGame.isBoardFull()) {
                 System.out.println("\nI can't play.\nThe Board is Full\n\nGame Over.");
