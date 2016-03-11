@@ -37,7 +37,6 @@ public class AiPlayer {
             int v = Integer.MAX_VALUE;
             for (int i = 0; i < GameBoard.NOF_COLS; i++) {
                 if (currentGame.isValidPlay(i)) {
-                    // GameBoard nextMoveBoard = (GameBoard) currentGame.clone();//new GameBoard(currentGame.getGameBoard());
                     GameBoard nextMoveBoard = new GameBoard(currentGame.getGameBoard());
                     nextMoveBoard.playPiece(i);
                     int value = Calculate_Max_Utility(nextMoveBoard, depth_level, Integer.MIN_VALUE, Integer.MAX_VALUE);
@@ -51,7 +50,6 @@ public class AiPlayer {
             int v = Integer.MIN_VALUE;
             for (int i = 0; i < GameBoard.NOF_COLS; i++) {
                 if (currentGame.isValidPlay(i)) {
-                    // GameBoard nextMoveBoard = (GameBoard) currentGame.clone();//new GameBoard(currentGame.getGameBoard());
                     GameBoard nextMoveBoard = new GameBoard(currentGame.getGameBoard());
                     nextMoveBoard.playPiece(i);
                     int value = Calculate_Min_Utility(nextMoveBoard, depth_level, Integer.MIN_VALUE, Integer.MAX_VALUE);
@@ -68,7 +66,7 @@ public class AiPlayer {
     /**
      * This method calculates the min value.
      * 
-     * @param currentGame The GameBoard object that is currently being used to play the game.
+     * @param gameBoard The GameBoard object that is currently being used to play the game.
      * @param depth_level depth to which computer will search for making best possible next move
      * @param alpha_value maximum utility value for MAX player
      * @param beta_value maximum utility value for MIN player 
@@ -83,8 +81,6 @@ public class AiPlayer {
             int v = Integer.MAX_VALUE;
             for (int i = 0; i < GameBoard.NOF_COLS; i++) {
                 if (gameBoard.isValidPlay(i)) {
-                    // Create Shallow copy to improve time complexity
-                    // GameBoard board4NextMove = (GameBoard) gameBoard.clone();//new GameBoard(gameBoard.getGameBoard());
                     GameBoard board4NextMove = new GameBoard(gameBoard.getGameBoard());
                     board4NextMove.playPiece(i);
                     int value = Calculate_Max_Utility(board4NextMove, depth_level - 1, alpha_value, beta_value);
@@ -92,7 +88,6 @@ public class AiPlayer {
                         v = value;
                     }
                     if (v <= alpha_value) {
-                        //System.out.println("Pruning as (v <= alpha_value): v = " + v + ", alpha_value = " + alpha_value);
                         return v;
                     }
                     if (beta_value > v) {
@@ -110,7 +105,7 @@ public class AiPlayer {
     /**
      * This method calculates the max value.
      * 
-     * @param currentGame The GameBoard object that is currently being used to play the game.
+     * @param gameBoard The GameBoard object that is currently being used to play the game.
      * @param depth_level depth to which computer will search for making best possible next move
      * @param alpha_value maximum utility value for MAX player
      * @param beta_value maximum utility value for MIN player 
@@ -125,8 +120,6 @@ public class AiPlayer {
             int v = Integer.MIN_VALUE;
             for (int i = 0; i < GameBoard.NOF_COLS; i++) {
                 if (gameBoard.isValidPlay(i)) {
-                    // Create Shallow copy to improve time complexity
-                    // GameBoard board4NextMove = (GameBoard) gameBoard.clone();//new GameBoard(gameBoard.getGameBoard());
                     GameBoard board4NextMove = new GameBoard(gameBoard.getGameBoard());
                     board4NextMove.playPiece(i);
                     int value = Calculate_Min_Utility(board4NextMove, depth_level - 1, alpha_value, beta_value);
@@ -134,7 +127,6 @@ public class AiPlayer {
                         v = value;
                     }
                     if (v >= beta_value) {
-                        //System.out.println("Prunning as (v >= beta_value): v = " + v + ", beta = " + beta_value);
                         return v;
                     }
                     if (alpha_value < v) {
