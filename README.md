@@ -1,10 +1,10 @@
 ## MaxConnect4
 
-####This is a JAVA Source code for MaxConnect4 game implemented using Minimax AI algorithm.
+#### This is a JAVA Source code for MaxConnect4 game implemented using Minimax AI algorithm.
 
-####Class : Maxconnect4, AiPlayer, GameBoard
+#### Class : Maxconnect4, AiPlayer, GameBoard
 	 
-###Maxconnect4 :
+### Maxconnect4 :
         APIS : main(), MakeHumanPlay(),  MakeComputerPlay4OneMove(outputFileName), printBoardAndScore(),
                MakeComputerPlay4Interactive(), printResult().
 	
@@ -20,7 +20,7 @@
                                            or tie.
 
         
-###GameBoard :
+### GameBoard :
         APIS : getscore(), getCurrentTurn(), getGameBoard(), printGameBoard()
 
         - getscore()       : this function takes the current score and send it to printBoardAndScore() 
@@ -31,7 +31,7 @@
         - printGameBoard() : this function prints the current board state.
         
 
-###AiPlayer :
+### AiPlayer :
         APIS : findBestPlay(), Calculate_Min_Utility(), Calculate_Max_Utility()
 
         - findBestPlay()          : this function makes the decision to make a move for the computer using 
@@ -42,7 +42,7 @@
         - Calculate_Min_Utility() : this function calculates the max value.
 
 
-###How to run the Code :
+### How to run the Code :
 
         Compile:
         javac -classpath . Maxconnect4.java
@@ -59,37 +59,3 @@
         Command to retrieve execution time:
         time java Maxconnect4 one-move [input_file] [output_file] [depth]  
         for example: java Maxconnect4 one-move input1.txt output.txt 8
-
-
-###Execution time chart :
-        
-        Depth: 1
-        User time : 0m0.129s
-
-        Depth: 2
-        User time : 0m0.133s
-
-        Depth: 3
-        User time : 0m0.134s
-
-        Depth: 4
-        User time : 0m0.152s
-
-        Depth: 5
-        User time : 0m0.162s
-
-        Depth: 6
-        User time : 0m0.218s
-
-        Depth: 7
-        User time : 0m0.389s
-
-        Depth: 8
-        User time : 0m0.558s
-
-        Depth: 9
-        User time : 0m0.884s
-
-        Depth: 10
-        User time : 0m1.929s
-
